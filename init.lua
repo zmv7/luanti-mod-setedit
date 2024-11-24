@@ -21,7 +21,7 @@ local function setedit(name, prompt)
 	local out = {}
 	for i, setting in ipairs(lset) do
 		local val = st[setting]
-		table.insert(out,setting..","..val)
+		table.insert(out,F(setting)..","..F(val))
 	end
 	local fs = "size[9,11]" ..
 	"field[0.3,0.5;7.6,1;search;Search;"..F(prompt or "").."]" ..
