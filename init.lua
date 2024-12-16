@@ -104,4 +104,14 @@ if INIT == "client" then
 			core.settings:set(setting, val)
 			return true, setting .. " = " .. val
 	end})
+	core.register_chatcommand("unset",{
+		desciption = "Remove setting from config",
+		params = "<setting>",
+		func = function(param)
+			if not param or param == "" then
+				return false, "Missing parameters"
+			end
+			core.settings:remove(param)
+			return true, "Removed "..param
+	end})
 end
