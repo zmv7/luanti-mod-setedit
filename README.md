@@ -5,3 +5,4 @@ There are all user-changed settings. Double-click to toggle booleans, adjust oth
 ### Usage - clientmod
 * `.setedit` - same as for servermod
 * `.set <setting> [value]` - get or set the setting
+* `.unset <setting>` - remove setting from config file (reset to defualt value)
